@@ -1,6 +1,6 @@
 import React from "react"; // Підключаю реакт
 
-import TodoListItem from "./todo-list-item"; // Імпортую елемент щоб вставити його в список
+import TodoListItem from "../todo-list-item/todo-list-item"; // Імпортую елемент щоб вставити його в список
 import './todo-list.css';
 
 const TodoList = ({todos}) => { // Створюю реакт компонент і деструктуризацією приймаю значення елементів з index.js
