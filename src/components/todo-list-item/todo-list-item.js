@@ -3,6 +3,9 @@ import './todo-list-item.css';
 
 
 export default class TodoListItem extends Component { // extends Component обов'язково для створення класів реакт // Можна зразу експортувати
+    onLabelClick = () => { // Створюю функцію СТРІЛКУ (ВАЖНО!!!) щоб виводить в консоль назву елемента списк
+        console.log(`Done: ${this.props.label}`) // Як ітог при нажатії на текст елемента списка в консоль виведеться те що написано в label елемента
+        };
 
     render() {
         const {label, important = false} = this.props; // Приймаю свойства об'єктів з app.js
@@ -16,7 +19,9 @@ export default class TodoListItem extends Component { // extends Component об�
             <span className="todo-list-item"> {/*Спан для кожного елементу списку */}
 
                 <span
-                    className="todo-list-item-label" style={style}> {/*Елемент Списку*/}
+                    className="todo-list-item-label"
+                    style={style}
+                    onClick={this.onLabelClick}> {/*Елемент Списку*/} {/*Добавляю слухач нажатія на текст який верне функцію onLabelClick*/}
                     {label}
             </span>
 
