@@ -25,7 +25,7 @@ export default class TodoListItem extends Component { // extends Component об�
         });
     };
     render() {
-        const {label} = this.props; // Приймаю свойства об'єктів з app.js
+        const {label, onDeleted} = this.props; // Приймаю свойства об'єктів з app.js
         const { done, important} = this.state; // Витягнули done із state деструктуризацією
 
         let classNames = 'todo-list-item'; // Створили змінну з ім'ям класу (Юзаєм в 30 строчці)
@@ -59,7 +59,8 @@ export default class TodoListItem extends Component { // extends Component об�
           </button>
 
           <button type="button"
-                  className="btn btn-outline-danger btn-sm float-right"> {/*Кнопка з іконкою видалення*/}
+                  className="btn btn-outline-danger btn-sm float-right"
+                    onClick={onDeleted}> {/*Кнопка з іконкою видалення*/} {/*Передаю значення onDeleted в todo-list*/}
               <i className="fa fa-trash-o"/>
           </button>
 
