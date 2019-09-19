@@ -47,7 +47,7 @@ export default class App extends Component { // Створив реакт ком
 
                 <TodoList
                     todos={this.state.todoData} // Витягнув todoData із state
-                    onDeleted={this.deleteItem} // Створив власне свойство onDeleted в якому викликав функцію (deleItem)
+                    onDeleted={this.deleteItem} // Створив власне свойство onDeleted в якому викликав функцію (deleteItem)
                 /> {/*Записав в todos данні з масиву todoData*/}
             </div>
         );// JSX зборщик кода який збирає всі компоненти в 1 для удобного вивода
